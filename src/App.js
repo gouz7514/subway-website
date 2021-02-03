@@ -1,35 +1,19 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-class App extends React.Component {
-  state = {
-    count : 0
-  };
-  add = () => {
-    console.log('add');
-    this.setState(current => ({count : current.count + 1}));
-  };
-  minus = () => {
-    console.log('minus');
-    this.setState(current => ({count : current.count - 1}));
-  };
-  componentDidMount() {
-    console.log('component rendered')
-  }
-  componentDidUpdate() {
-    console.log('component updated');
-  }
-  render() {
-    console.log('im rendering');
-    return (
-      <div>
-        <h1>
-          The number is : {this.state.count}
-        </h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    )
-  }
+
+function App() {
+  return (
+    <div className='App'>
+      <Router>
+      <Navbar />
+      <Switch>
+        <Route path='/' exact />
+      </Switch>
+      </Router>
+    </div>
+  )
 }
 
 export default App;
