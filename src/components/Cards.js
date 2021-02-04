@@ -13,13 +13,13 @@ function Cards() {
               src="images/img-9.jpg"
               text="Explore the hidden waterfall deep insdie the Amazon jungle"
               label='adventure'
-              path='/services'
+              path='/subway-website/ingredients'
             />
             <CardItem
               src="images/img-2.jpg"
               text="Travel through the islands of bali"
               label='luxury'
-              path='/services'
+              path='/subway-website/ingredients'
             />  
           </ul>
           <ul className="cards__items">
@@ -27,19 +27,19 @@ function Cards() {
               src="images/img-9.jpg"
               text="Explore the hidden waterfall deep insdie the Amazon jungle"
               label='adventure'
-              path='/services'
+              path='/subway-website/ingredients'
             />
             <CardItem
               src="images/img-2.jpg"
               text="Travel through the islands of bali"
               label='luxury'
-              path='/services'
+              path='/subway-website/ingredients'
             />
             <CardItem
               src="images/img-2.jpg"
               text="Travel through the islands of bali"
               label='luxury'
-              path='/services'
+              path='/subway-website/ingredients'
             />  
           </ul>
         </div>

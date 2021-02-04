@@ -37,17 +37,17 @@ function Navbar() {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/subway-website/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                이용 방법
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/subway-website/services' className='nav-links' onClick={closeMobileMenu}>
-                Services
+              <Link to='/subway-website/ingredients' className='nav-links' onClick={closeMobileMenu}>
+                재료 소개
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/subway-website/products' className='nav-links' onClick={closeMobileMenu}>
-                Products
+              <Link to='/subway-website/combinations' className='nav-links' onClick={closeMobileMenu}>
+                꿀 조합
               </Link>
             </li>
             <li className='nav-item'>

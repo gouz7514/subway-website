@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import {Button} from './Button';
+// import {Button} from './Button';
 import './Footer.css';
 
 function Footer() {
@@ -8,49 +8,26 @@ function Footer() {
     <div className='footer-container'>
       <section className="footer-subscription">
         <p className="footer-subscription-heading">
-          Join the Adventure new letter to receive our best vacation deals
+        영화 마니아, 피아니스트이자 풀스택을 정복하고자 하는 개발자
         </p>
         <p className="footer-subscription-text">
-          You can unsubscribe at any time.
+          김학재입니다
         </p>
-        <div className="input-areas">
-          <form>
-            <input type="email" name="email" placeholder="your email" className="footer-input"/>
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
-          </form>
-        </div>
       </section>
-      <div className="footer-links">
-        <div className="footer-link-wrapper">
-          <div className="footer-link-items">
-            <h2>About Us</h2>
-              <Link to='sign-up'>How it works</Link>
-              <Link>Testimonials</Link>
-          </div>
-        </div>
-        <div className="footer-link-wrapper">
-          <div className="footer-link-items">
-            <h2>About Us</h2>
-              <Link to='sign-up'>How it works</Link>
-              <Link>Testimonials</Link>
-          </div>
-        </div>
-      </div>
-      <sectoin className="social-media">
+      <section className="social-media">
         <div className="social-media-wrap">
-          <div className="footer-logo">
-            <Link to='/' className="social-logo">
-              어케했Sub <i className="fab fa-typo3"></i>
-            </Link>
-          </div>
           <small className="website-rights">어케했Sub 2021 by KHJ</small>
           <div className="social-icons">
-            <Link className="social-icon-link facebook" to='/' target='_blank' aria-label="Facebook">
-              <i className="fab fa-facebook-f"></i>
+            <Link className="social-icon-link github" to={{pathname: "https://github.com/gouz7514/subway-website"}} target='_blank' aria-label="github">
+              <i className="fab fa-github"></i>
             </Link>
+            <Link className="social-icon-link instagram" to={{pathname: "https://www.instagram.com/haaaaaaa_kjae/"}} target='_blank' aria-label="instagram">
+              <i className="fab fa-instagram"></i>
+            </Link>
+
           </div>
         </div>
-      </sectoin>
+      </section>
     </div>
   )
 }
