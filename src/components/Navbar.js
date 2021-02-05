@@ -74,6 +74,7 @@ function Navbar() {
             {/* <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> */}
             <li className='nav-item' >
               <div className='nav-links nav-dropdown' onClick={() => setDropdown(dropdown => !dropdown)}>
+              {/* <div className='nav-links nav-dropdown' onClick={onDropClick}> */}
                 재료 소개 <i className='fas fa-caret-down' />
               </div>
               {dropdown && <Dropdown />}

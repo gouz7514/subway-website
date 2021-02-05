@@ -4,6 +4,10 @@
   top: 80px;
   list-style: none;
   text-align: center;
+  display: hidden;
+}
+.dropdown-menu.show-dropdown {
+  display: block;
 }
 
 .dropdown-menu li {
@@ -34,6 +38,8 @@
     text-align: center;
     /* width: 100%; */
     z-index: 1;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
   .dropdown-link {
     display: block;
