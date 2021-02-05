@@ -11,7 +11,6 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  let x;
 
   // const onMouseEnter = () => {
   //   if (window.innerWidth <= 960) {
@@ -32,14 +31,6 @@ function Navbar() {
   const handleDropClick = (e) => {
     if(!e.target.closest('.nav-dropdown') && dropdown) {
       setDropdown(false);
-    }
-  };
-
-  const onDropClick = () => {
-    x = document.querySelector('nav-menu');
-    if(x.classList.contains('active')) {
-      console.log('yes');
-      x.classList.remove('active');
     }
   };
 
@@ -85,7 +76,7 @@ function Navbar() {
               <div className='nav-links nav-dropdown' onClick={() => setDropdown(dropdown => !dropdown)}>
                 재료 소개 <i className='fas fa-caret-down' />
               </div>
-              {dropdown && <Dropdown onClick={onDropClick}/>}
+              {dropdown && <Dropdown />}
             </li>
             <li className='nav-item'>
               <Link to='/subway-website/combinations' className='nav-links' onClick={closeMobileMenu}>
