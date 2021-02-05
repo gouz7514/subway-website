@@ -12,21 +12,35 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
-    if (window.innerWidth <= 960) {
-      setDropdown(true);
-    } else {
-      setDropdown(true);
+  // const onMouseEnter = () => {
+  //   if (window.innerWidth <= 960) {
+  //     setDropdown(true);
+  //   } else {
+  //     setDropdown(true);
+  //   }
+  // };
+
+  // const onMouseLeave = () => {
+  //   if (window.innerWidth <= 960) {
+  //     setDropdown(false);
+  //   } else {
+  //     setDropdown(false);
+  //   }
+  // };
+
+  const handleDropClick = (e) => {
+    if(!e.target.closest('.nav-dropdown') && dropdown) {
+      setDropdown(false);
     }
   };
 
-  const onMouseLeave = () => {
-    if (window.innerWidth <= 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
+  // const onDropClick = () => {
+  //   if (window.innerWidth <= 960) {
+  //     setDropdown(true);
+  //   } else {
+  //     setDropdown(true);
+  //   }
+  // };
 
   const showButton = () => {
     if(window.innerWidth <= 960) {
@@ -39,6 +53,13 @@ function Navbar() {
   useEffect(() => {
     showButton()
   }, []);
+
+  useEffect(() => {
+    document.addEventListener('click', handleDropClick);
+    return () => {
+      document.removeEventListener('click', handleDropClick);
+    };
+  });
 
   window.addEventListener('resize', showButton);
 
@@ -58,10 +79,11 @@ function Navbar() {
                 이용 방법
               </Link>
             </li>
-            <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-              <Link to='/subway-website/ingredients' className='nav-links' onClick={closeMobileMenu}>
+            {/* <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> */}
+            <li className='nav-item' >
+              <div className='nav-links nav-dropdown' onClick={() => setDropdown(dropdown => !dropdown)}>
                 재료 소개 <i className='fas fa-caret-down' />
-              </Link>
+              </div>
               {dropdown && <Dropdown />}
             </li>
             <li className='nav-item'>
