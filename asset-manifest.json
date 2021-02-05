@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/subway-website/static/css/main.8ab33aaf.chunk.css",
+    "main.css": "/subway-website/static/css/main.44cfa7f7.chunk.css",
     "main.js": "/subway-website/static/js/main.9a18e848.chunk.js",
     "main.js.map": "/subway-website/static/js/main.9a18e848.chunk.js.map",
     "runtime-main.js": "/subway-website/static/js/runtime-main.a464e410.js",
@@ -8,14 +8,14 @@
     "static/js/2.be88890d.chunk.js": "/subway-website/static/js/2.be88890d.chunk.js",
     "static/js/2.be88890d.chunk.js.map": "/subway-website/static/js/2.be88890d.chunk.js.map",
     "index.html": "/subway-website/index.html",
-    "static/css/main.8ab33aaf.chunk.css.map": "/subway-website/static/css/main.8ab33aaf.chunk.css.map",
+    "static/css/main.44cfa7f7.chunk.css.map": "/subway-website/static/css/main.44cfa7f7.chunk.css.map",
     "static/js/2.be88890d.chunk.js.LICENSE.txt": "/subway-website/static/js/2.be88890d.chunk.js.LICENSE.txt",
     "static/media/App.css": "/subway-website/static/media/img-8.fabdf94d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a464e410.js",
     "static/js/2.be88890d.chunk.js",
-    "static/css/main.8ab33aaf.chunk.css",
+    "static/css/main.44cfa7f7.chunk.css",
     "static/js/main.9a18e848.chunk.js"
   ]
 }
