@@ -16,6 +16,7 @@ function Dropdown() {
   return (
     <>
       <ul onClick={handleClick} className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}>
+      {/* <ul> */}
         {MenuItems.map((item, index) => {
           return (
             <li key={index} onClick={closeMobileMenu}>

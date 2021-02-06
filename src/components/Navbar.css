@@ -46,9 +46,11 @@
   }
   
   .nav-item {
+    display: block;
     color: #ffce32;
-    height: 80px;
+    /* height: 80px; */
     font-weight: bold;
+    margin: 0;
   }
   
   .nav-links {
@@ -85,10 +87,6 @@
   }
   
   @media screen and (max-width: 960px) {
-    /* .fa-caret-down {
-      display: none;
-    } */
-
     .NavbarItems {
       position: relative;
     }
@@ -103,10 +101,11 @@
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
+      overflow: hidden;
     }
   
     .nav-menu.active {
-      background: #242222;
+      background: #009223;
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
@@ -118,6 +117,7 @@
       padding: 2rem;
       width: 100%;
       display: table;
+      position: relative;
     }
   
     .nav-links:hover {

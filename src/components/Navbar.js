@@ -41,6 +41,12 @@ function Navbar() {
       setButton(true);
     }
   }
+
+  const onDropClick = () => {
+    const x = document.querySelector('.dropdown-menu');
+    console.log(x.classList);
+    x.classList.toggle('active');
+  }
   
   useEffect(() => {
     showButton()
@@ -73,11 +79,13 @@ function Navbar() {
             </li>
             {/* <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> */}
             <li className='nav-item' >
-              <div className='nav-links nav-dropdown' onClick={() => setDropdown(dropdown => !dropdown)}>
-              {/* <div className='nav-links nav-dropdown' onClick={onDropClick}> */}
+              {/* <div className='nav-links nav-dropdown' onClick={() => setDropdown(dropdown => !dropdown)}> */}
+              <div className='nav-links nav-dropdown' onClick={onDropClick}>
                 재료 소개 <i className='fas fa-caret-down' />
+                <Dropdown />
               </div>
-              {dropdown && <Dropdown />}
+              {/* <Dropdown /> */}
+              {/* {dropdown && <Dropdown />} */}
             </li>
             <li className='nav-item'>
               <Link to='/subway-website/combinations' className='nav-links' onClick={closeMobileMenu}>
