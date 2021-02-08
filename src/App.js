@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import {BrowserRouter as Router, Switch, Route, BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home';
 import Ingredients from './components/pages/Ingredients';
@@ -13,14 +13,13 @@ import Sauce from './components/pages/Sauce';
 
 function App() {
   return (
-    <BrowserRouter>
     <div className='App'>
       <Router>
       <Navbar />
       <Switch>
         <Route path='/subway-website/' exact component={Home}/>
         <Route path='/subway-website/ingredients' exact component={Ingredients}/>
-        <Route path='/subway-website/ingredients/bread' exact component={Bread}/>
+        <Route path='/subway-website/ingredients/bread' component={Bread}/>
         <Route path='/subway-website/ingredients/vegetable' component={Vegetable}/>
         <Route path='/subway-website/ingredients/cheese' component={Cheese}/>
         <Route path='/subway-website/ingredients/sauce' component={Sauce}/>
@@ -29,7 +28,6 @@ function App() {
       </Switch>
       </Router>
     </div>
-    </BrowserRouter>
   )
 }
 
