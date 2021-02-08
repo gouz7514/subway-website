@@ -44,7 +44,6 @@ function Navbar() {
 
   const onDropClick = () => {
     const x = document.querySelector('.dropdown-menu');
-    console.log(x.classList);
     x.classList.toggle('active');
   }
   

@@ -1,9 +1,13 @@
 import React from 'react'
+import '../../App.css';
+import BreadList from '../BreadList';
+import Footer from '../Footer';
 
 export default function Bread() {
   return (
     <>
-      <h1 className='bread'>BREAD</h1>
+      <BreadList />
+      <Footer />
     </>
   )
 }
