@@ -7,7 +7,7 @@ import Dropdown from './Dropdown';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [dropdown, setDropdown] = useState(false);
+  // const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -29,8 +29,9 @@ function Navbar() {
   // };
 
   const handleDropClick = (e) => {
-    if(!e.target.closest('.nav-dropdown') && dropdown) {
-      setDropdown(false);
+    if(!e.target.closest('.nav-dropdown')) {
+      const x = document.querySelector('.dropdown-menu');
+      x.classList.remove('active');
     }
   };
 
