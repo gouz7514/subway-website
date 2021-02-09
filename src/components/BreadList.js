@@ -1,7 +1,7 @@
 import React from 'react';
 import BreadItems from './items/BreadItems';
 import './Cards.css';
-import './BreadList.css';
+import './IngredientList.css';
 
 function BreadList() {
   return (

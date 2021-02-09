@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BreadItems(props) {
+function VegetableItems(props) {
   return (
     <>
       <li className="ingredient__item">
@@ -17,4 +17,4 @@ function BreadItems(props) {
   )
 }
 
-export default BreadItems;
+export default VegetableItems;
