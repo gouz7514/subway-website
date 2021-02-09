@@ -10,6 +10,7 @@
 }
 
 .ingredient__item__link {
+  /* height: 100px; */
   display: flex;
   flex-flow: column;
   width: 22rem;
@@ -67,12 +68,21 @@
 }
 
 .ingredient__item__info {
-  padding: 20px 30px 30px;
+  height: 5rem;
+  display: table;
+  padding: 20px 20px 20px 20px;
   background-color: #009223;
 }
 
+.ingredient__item__text__wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .ingredient__item__text {
+  text-align: center;
   color: #ffce32;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 18px;
+  white-space: pre-wrap;
 }

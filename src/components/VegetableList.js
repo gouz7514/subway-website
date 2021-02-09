@@ -11,51 +11,51 @@ function VegetableList() {
           <ul className="cards__items">
             <VegetableItems
               src='../images/vegetables/lettuce.jpg'
-              text='양상추 설명'
+              text='5kcal'
               label='양상추'
             />
             <VegetableItems
               src='../images/vegetables/tomato.jpg'
-              text='토마토 설명'
+              text='5kcal'
               label='토마토'
             />
             <VegetableItems
               src='../images/vegetables/cucumber.jpg'
-              text='오이 설명'
+              text='5kcal'
               label='오이'
             />           
           </ul>
           <ul className="cards__items">
             <VegetableItems
               src='../images/vegetables/peppers.jpg'
-              text='피망 설명'
+              text='5kcal'
               label='피망'
             />
             <VegetableItems
               src='../images/vegetables/onions.jpg'
-              text='양파 설명'
+              text='5kcal'
               label='양파'
             />
             <VegetableItems
               src='../images/vegetables/pickle.jpg'
-              text='피클 설명'
+              text='5kcal'
               label='피클'
             />           
           </ul>
           <ul className="cards__items">
             <VegetableItems
               src='../images/vegetables/olive.jpg'
-              text='올리브 설명'
+              text='5kcal'
               label='올리브'
             />
             <VegetableItems
               src='../images/vegetables/jalapeno.jpg'
-              text='할라피뇨 설명'
+              text='5kcal'
               label='할라피뇨'
             />
             <VegetableItems
               src='../images/vegetables/avocado.jpg'
-              text='아보카도 설명'
+              text='60kcal'
               label='아보카도'
             />           
           </ul>

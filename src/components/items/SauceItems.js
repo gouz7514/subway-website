@@ -1,6 +1,6 @@
 import React from 'react'
 
-function VegetableItems(props) {
+function SauceItems(props) {
   return (
     <>
       <li className="ingredient__item">
@@ -10,7 +10,7 @@ function VegetableItems(props) {
           </figure>
           <div className="ingredient__item__info">
             <div className="ingredient__item__text__wrapper">
-              <h5 className="ingredient__item__text">{props.text}</h5>
+              <h5 className="ingredient__item__text">{props.text.replace('<br>', '\n')}</h5>
             </div>
           </div>
         </div>
@@ -19,4 +19,4 @@ function VegetableItems(props) {
   )
 }
 
-export default VegetableItems;
+export default SauceItems;

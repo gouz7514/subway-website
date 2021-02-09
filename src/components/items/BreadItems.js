@@ -9,7 +9,7 @@ function BreadItems(props) {
             <img src={props.src} alt={props.label+' 이미지'} className="cards__item__img" />
           </figure>
           <div className="ingredient__item__info">
-            <h5 className="ingredient__item__text">{props.text}</h5>
+            <h5 className="ingredient__item__text">{props.text.replace('<br>', '\n')}</h5>
           </div>
         </div>
       </li>

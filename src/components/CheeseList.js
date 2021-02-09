@@ -11,17 +11,17 @@ function CheeseList() {
           <ul className="cards__items">
             <CheeseItems
               src='../images/cheeses/AmericanCheese.jpg'
-              text='아메리칸 치즈 설명'
+              text='40kcal'
               label='아메리칸 치즈'
             />
             <CheeseItems
               src='../images/cheeses/ShreddedCheese.jpg'
-              text='슈레드 치즈 설명'
+              text='50kcal'
               label='슈레드 치즈'
             />
             <CheeseItems
               src='../images/cheeses/MozzarellaCheese.jpg'
-              text='모차렐라 치즈 설명'
+              text='44kcal'
               label='모차렐라 치즈'
             />
           </ul>
