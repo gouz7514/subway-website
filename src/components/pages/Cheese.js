@@ -1,9 +1,13 @@
 import React from 'react'
+import '../../App.css';
+import CheeseList from '../CheeseList';
+import Footer from '../Footer';
 
 export default function Cheese() {
   return (
     <>
-      <h1 className='cheese'>CHEESE</h1>
+      <CheeseList />
+      <Footer />
     </>
   )
 }
