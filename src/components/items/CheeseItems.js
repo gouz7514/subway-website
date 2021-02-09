@@ -10,7 +10,7 @@ function CheeseItems(props) {
           </figure>
           <div className="ingredient__item__info">
             <div className="ingredient__item__text__wrapper">
-              <h5 className="ingredient__item__text">{props.text}</h5>
+              <h5 className="ingredient__item__text bigger">{props.text}</h5>
             </div>
           </div>
         </div>

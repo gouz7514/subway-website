@@ -3,7 +3,7 @@
 } */
 .ingredient__item {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   margin: 0 1rem;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -82,7 +82,11 @@
 .ingredient__item__text {
   text-align: center;
   color: #ffce32;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 24px;
   white-space: pre-wrap;
+  font-weight: 1000;
+}
+.ingredient__item__text.bigger {
+  font-size: 18px;
 }
