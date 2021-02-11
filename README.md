@@ -5,3 +5,4 @@ Check Live Demo at here [어케했Sub](https://gouz7514.github.io/subway-website
 아직 전체적인 디자인 및 Hook의 사용법 익히는 중<br>
 Dropdown Menu 추가 완료<br>
 모바일 환경에서 Accordion 구현 완료<br>
+Slider 이용해서 시작 화면 구축 완료<br>
