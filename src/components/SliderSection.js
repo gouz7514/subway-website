@@ -8,20 +8,6 @@ import './SliderSection.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-// var swiper = new Swiper('.swiper-container', {
-//   observeParents: true,
-//   observer: true,
-//   rebuildOnUpdate : true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     type: 'progressbar',
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
-
 function SliderSection() {
   return (
     <React.Fragment>
@@ -29,17 +15,9 @@ function SliderSection() {
       watchSlidesProgress
       spaceBetween={50}
       slidesPerView={1}
-      // pagination={{ 
-      //   clickable: true,
-      //   el: '.swiper-pagination',
-      //   type: 'progressbar', }}
-      // navigation={{
-      //   nextEl : '.swiper-button-next',
-      //   prevEl : '.swiper-button-prev',
-      // }}
       navigation
       pagination
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSwiper={(swiper) => console.log(swiper)}
     > 
       <SwiperSlide>시작해보세요</SwiperSlide>
       <SwiperSlide>STEP 1 메뉴 선택</SwiperSlide>

@@ -6,7 +6,7 @@ import Footer from '../Footer';
 export default function Cheese() {
   return (
     <>
-      <CheeseList />
+      <CheeseList defer/>
       <Footer />
     </>
   )

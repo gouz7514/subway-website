@@ -10,19 +10,25 @@ function CheeseList() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CheeseItems
+              presrc='../images/loading.gif'
               src='../images/cheeses/AmericanCheese.jpg'
               text='40kcal'
               label='아메리칸 치즈'
+              data-src='../images/loading.gif'
             />
             <CheeseItems
+              presrc='../images/loading.gif'
               src='../images/cheeses/ShreddedCheese.jpg'
               text='50kcal'
               label='슈레드 치즈'
+              data-src='../images/loading.gif'
             />
             <CheeseItems
+              presrc='../images/loading.gif'
               src='../images/cheeses/MozzarellaCheese.jpg'
               text='44kcal'
               label='모차렐라 치즈'
+              data-src='../images/loading.gif'
             />
           </ul>
         </div>
