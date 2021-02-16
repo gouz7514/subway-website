@@ -3,9 +3,28 @@ import BreadItems from './items/BreadItems';
 import './Cards.css';
 import './IngredientList.css';
 
-function BreadList() {
-  return (
-    <div className='cards'>
+class BreadList extends React.Component {
+  componentDidMount() {
+    const images = document.querySelectorAll("img");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const image = entry.target;
+        const src = image.getAttribute("data-lazy");
+        image.setAttribute("src", src);
+        observer.unobserve(image);
+      })
+    })
+
+    images.forEach((image) => {
+      observer.observe(image);
+    })
+  }
+
+  render() {
+    return (
+      <div className='cards'>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
@@ -52,7 +71,8 @@ function BreadList() {
         </div>
       </div>
     </div>
-  )
+    )
+  }
 }
 
 export default BreadList;
