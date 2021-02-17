@@ -6,3 +6,4 @@ Check Live Demo at here [어케했Sub](https://gouz7514.github.io/subway-website
 Dropdown Menu 추가 완료<br>
 모바일 환경에서 Accordion 구현 완료<br>
 Slider 이용해서 시작 화면 구축 완료<br>
+Slider 내용 채우기 및 모달 구현 필요<br>
