@@ -5,7 +5,7 @@
 
 .swiper-container {
   width: 100%;
-  height: 500px;
+  height: 90vh;
 }
 
 .swiper-slide {
@@ -26,4 +26,10 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 960px) {
+  .swiper-container {
+    height: 600px;
+  }
 }
