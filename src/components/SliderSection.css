@@ -27,6 +27,27 @@
   -webkit-align-items: center;
   align-items: center;
 }
+.swiper-slide-content {
+  background-color: darkgray;
+  height: 80%;
+  width: 80%;
+}
+.swiper-slide-content-intro {
+  line-height: 3rem;
+}
+.title-text {
+  font-weight: 1000;
+  padding: 1rem;
+}
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detail-text {
+  font-weight: normal;
+}
 
 @media only screen and (max-width: 960px) {
   .swiper-container {
