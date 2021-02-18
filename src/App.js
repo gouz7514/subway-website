@@ -31,23 +31,4 @@ function App() {
   )
 }
 
-// TODO : 이 부분 수정 필요함. react router는 새로고침이 아니니까 새로운 방법 찾아내야 함
-// window.addEventListener('click', (event) => {
-//   const images = document.querySelectorAll("img"); // 모든 이미지 파일 선택
-
-//   const observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach((entry) => {
-//       if (!entry.isIntersecting) return;
-//       const image = entry.target;
-//       const src = image.getAttribute("data-lazy");
-//       image.setAttribute("src", src);
-//       observer.unobserve(image);
-//     })
-//   })
-
-//   images.forEach((image) => {
-//     observer.observe(image);
-//   })
-// });
-
 export default App;

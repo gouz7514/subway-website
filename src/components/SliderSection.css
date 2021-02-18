@@ -44,9 +44,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 80%;
 }
 .detail-text {
   font-weight: normal;
+  height: 100%;
 }
 
 @media only screen and (max-width: 960px) {
