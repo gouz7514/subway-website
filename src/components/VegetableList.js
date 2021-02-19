@@ -28,60 +28,51 @@ class VegetableList extends React.Component {
           <div className="cards__wrapper">
             <ul className="cards__items">
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/lettuce.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/lettuce_47kOcepHh6uc.jpg'
                 text='5kcal'
                 label='양상추'
               />
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/tomato.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/tomato_uhyH3wkbk.jpg'
                 text='5kcal'
                 label='토마토'
               />
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/cucumber.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/cucumber_HkESQErEUVh.jpg'
                 text='5kcal'
                 label='오이'
               />           
             </ul>
             <ul className="cards__items">
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/peppers.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/peppers_k2g1Bp0FE.jpg'
                 text='5kcal'
                 label='피망'
               />
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/onions.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/onions_Pv1QtwFnveG.jpg'
                 text='5kcal'
                 label='양파'
               />
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/pickle.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/pickle_SNJe83bINwy.jpg'
                 text='5kcal'
                 label='피클'
               />           
             </ul>
             <ul className="cards__items">
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/olive.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/olive_y6cJTNCPM.jpg'
                 text='5kcal'
                 label='올리브'
               />
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/jalapeno.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/jalapeno_DFbotB0pkS.jpg'
                 text='5kcal'
                 label='할라피뇨'
               />
               <VegetableItems
-                presrc='../images/loading.gif'
-                src='../images/vegetables/avocado.jpg'
+                src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/avocado_Ha_942uzx.jpg'
                 text='60kcal'
                 label='아보카도'
               />           

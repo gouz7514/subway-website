@@ -1,21 +1,46 @@
 import React, {useState} from 'react'
 import '../App.css';
+import './IngredientList.css';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import './SliderSection.css';
 import './Modal.css';
+import BreadList from './BreadList.js';
+import CheeseList from './CheeseList.js';
 import SauceList from './SauceList.js';
+import VegetableList from './VegetableList.js';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function SliderSection() {
-  const [modalState, setModalState] = useState(false);
-  const toggleModalState = () => {
-    setModalState(!modalState);
+  // Bread State
+  const [BreadState, setBreadState] = useState(false);
+  const toggleBreadState = () => {
+    setBreadState(!BreadState);
   }
-  // const [showModal, setShowModal] = useState(false);
+
+  // Cheese State
+  const [CheeseState, setCheeseState] = useState(false);
+  const toggleCheeseState = () => {
+    setCheeseState(!CheeseState);
+  }
+
+  // Sauce State
+  const [SauceState, setSauceState] = useState(false);
+  const toggleSauceState = () => {
+    setSauceState(!SauceState);
+  }
+  // Vegetable State
+  const [VegetableState, setVegetableState] = useState(false);
+  const toggleVegetableState = () => {
+    setVegetableState(!VegetableState);
+  }
+  // const [modalStateVegetable, setModalState] = useState(false);
+  // const toggleModalState = () => {
+  //   setModalState(!modalStateVegetable);
+  // }
 
   return (
     <React.Fragment>
@@ -46,7 +71,9 @@ function SliderSection() {
               다양한 메뉴 중 원하는 메뉴를 고르세요.<br></br>
               15cm, 30cm 중 선택이 가능합니다.<br></br>
               자세한 메뉴 설명은 아래 버튼을 클릭하세요!<br></br>
-              <button>메뉴 보기</button>
+            </div>
+            <div className="modal-btnContainer">
+              <button className="modal-openBtn">메뉴 보기</button>
             </div>
           </div>
         </div>
@@ -63,6 +90,17 @@ function SliderSection() {
               6가지 종류 중 원하는 빵으로<br></br>
               무엇이든 선택하세요.<br></br>
             </span>
+            <div className="modal-btnContainer">
+              <button className="modal-openBtn" onClick={() => toggleBreadState()}>빵 보기</button>
+              <div className={`modal-dialog modalShowing-${BreadState}`} >
+                <div className="modal-body" >
+                  <div className="modal-closeBtnContainer">
+                    <button className="modal-closeBtn" onClick={() => toggleBreadState()}>닫기</button>
+                  </div>
+                  <BreadList />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         </SwiperSlide>
@@ -85,20 +123,23 @@ function SliderSection() {
       <div className="swiper-slide-content">
           <div className="title-wrapper">
             <h3 className="title-text">
-            STEP 4 야채&소스 선택
+            STEP 4 치즈 선택
             </h3>
           </div>
           <div className="detail-wrapper">
             <span className="detail-text">
-              싫어하는 야채는 드실 필요 없습니다!<br></br>
-              좋아하는 야채는 마음껏 드세요.<br></br>
-              소스는 무엇이든 선택해 드셔 보세요!<br></br>
+              3가지 종류의 치즈 중<br></br>
+              원하는 치즈를 고르세요!<br></br>
             </span>
-            <button onClick={() => toggleModalState()}>소스 보기</button>
-            <div className={`modal-dialog modalShowing-${modalState}`} >
-              <button className="modal-clsebtn" onClick={() => toggleModalState()}>close modal</button>
-              <div className="modal-body" >
-                <SauceList />
+            <div className="modal-btnContainer">
+              <button className="modal-openBtn" onClick={() => toggleCheeseState()}>치즈 보기</button>
+              <div className={`modal-dialog modalShowing-${CheeseState}`} >
+                <div className="modal-body" >
+                  <div className="modal-closeBtnContainer">
+                    <button className="modal-closeBtn" onClick={() => toggleCheeseState()}>닫기</button>
+                  </div>
+                  <CheeseList />
+                </div>
               </div>
             </div>
           </div>
@@ -108,7 +149,43 @@ function SliderSection() {
       <div className="swiper-slide-content">
           <div className="title-wrapper">
             <h3 className="title-text">
-            STEP 5 세트 선택
+            STEP 5 야채&소스 선택
+            </h3>
+          </div>
+          <div className="detail-wrapper">
+            <span className="detail-text">
+              싫어하는 야채는 드실 필요 없습니다!<br></br>
+              좋아하는 야채는 마음껏 드세요.<br></br>
+              소스는 무엇이든 선택해 드셔 보세요!<br></br>
+            </span>
+            <div className="modal-btnContainer">
+              <button className="modal-openBtn" onClick={() => toggleSauceState()}>소스 보기</button>
+              <div className={`modal-dialog modalShowing-${SauceState}`} >
+                <div className="modal-body" >
+                  <div className="modal-closeBtnContainer">
+                    <button className="modal-closeBtn" onClick={() => toggleSauceState()}>닫기</button>
+                  </div>
+                  <SauceList />
+                </div>
+              </div>
+              <button className="modal-openBtn" onClick={() => toggleVegetableState()}>야채 보기</button>
+              <div className={`modal-dialog modalShowing-${VegetableState}`} >
+                <div className="modal-body" >
+                  <div className="modal-closeBtnContainer">
+                    <button className="modal-closeBtn" onClick={() => toggleVegetableState()}>닫기</button>
+                  </div>
+                  <VegetableList />
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div className="swiper-slide-content">
+          <div className="title-wrapper">
+            <h3 className="title-text">
+            STEP 6 세트 선택
             </h3>
           </div>
           <div className="detail-wrapper">
