@@ -15,6 +15,7 @@ import VegetableList from './VegetableList.js';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function SliderSection() {
+  let width = (window.innerWidth < 960);
   // Bread State
   const [BreadState, setBreadState] = useState(false);
   const toggleBreadState = () => {
@@ -37,10 +38,6 @@ function SliderSection() {
   const toggleVegetableState = () => {
     setVegetableState(!VegetableState);
   }
-  // const [modalStateVegetable, setModalState] = useState(false);
-  // const toggleModalState = () => {
-  //   setModalState(!modalStateVegetable);
-  // }
 
   return (
     <React.Fragment>
@@ -49,7 +46,8 @@ function SliderSection() {
       spaceBetween={50}
       slidesPerView={1}
       navigation
-      allowTouchMove={false}
+      allowTouchMove={width}
+      // allowTouchMove={true}
       pagination={{ clickable: true }}
     > 
       <SwiperSlide>

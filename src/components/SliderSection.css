@@ -59,4 +59,7 @@
   .detail-text, .swiper-slide-content-intro {
     font-size: 18px;
   }
+  .swiper-slide-content-intro {
+    height: 15rem;
+  }
 }
