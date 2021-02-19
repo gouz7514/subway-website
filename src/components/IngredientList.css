@@ -10,7 +10,7 @@
   /* height: 100px; */
   display: flex;
   flex-flow: column;
-  width: 22rem;
+  width: 21rem;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -87,4 +87,9 @@
 }
 .ingredient__item__text.bigger {
   font-size: 18px;
+}
+@media only screen and (max-width: 960px) {
+  .ingredient__item__link {
+    width: 20rem;
+  }
 }

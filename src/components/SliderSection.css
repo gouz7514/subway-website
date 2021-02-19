@@ -56,4 +56,7 @@
   .swiper-container {
     height: 600px;
   }
+  .detail-text, .swiper-slide-content-intro {
+    font-size: 18px;
+  }
 }
