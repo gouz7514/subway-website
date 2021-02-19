@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/subway-website/static/css/main.88389ed0.chunk.css",
-    "main.js": "/subway-website/static/js/main.b05bec1e.chunk.js",
-    "main.js.map": "/subway-website/static/js/main.b05bec1e.chunk.js.map",
+    "main.js": "/subway-website/static/js/main.fe2ef092.chunk.js",
+    "main.js.map": "/subway-website/static/js/main.fe2ef092.chunk.js.map",
     "runtime-main.js": "/subway-website/static/js/runtime-main.a464e410.js",
     "runtime-main.js.map": "/subway-website/static/js/runtime-main.a464e410.js.map",
     "static/css/2.30a617c7.chunk.css": "/subway-website/static/css/2.30a617c7.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.30a617c7.chunk.css",
     "static/js/2.a02cbc85.chunk.js",
     "static/css/main.88389ed0.chunk.css",
-    "static/js/main.b05bec1e.chunk.js"
+    "static/js/main.fe2ef092.chunk.js"
   ]
 }
