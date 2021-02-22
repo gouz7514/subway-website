@@ -71,6 +71,9 @@
   padding: 20px 20px 20px 20px;
   background-color: #009223;
 }
+.ingredient__item__info.large {
+  height: 7rem;
+}
 
 .ingredient__item__text__wrapper {
   display: table-cell;
@@ -78,6 +81,7 @@
 }
 
 .ingredient__item__text {
+  height: 5rem;
   text-align: center;
   color: #ffce32;
   font-size: 15px;
@@ -91,5 +95,8 @@
 @media only screen and (max-width: 960px) {
   .ingredient__item__link {
     width: 20rem;
+  }
+  .ingredient__item__link.large {
+    width: 25rem;
   }
 }

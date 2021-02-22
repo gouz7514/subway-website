@@ -11,17 +11,23 @@ import BreadList from './BreadList.js';
 import CheeseList from './CheeseList.js';
 import SauceList from './SauceList.js';
 import VegetableList from './VegetableList.js';
+import MenuList from './MenuList.js';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function SliderSection() {
   let width = (window.innerWidth < 960);
+
+  // Menu State
+  const [MenuState, setMenuState] = useState(false);
+  const toggleMenuState = () => {
+    setMenuState(!MenuState);
+  }
   // Bread State
   const [BreadState, setBreadState] = useState(false);
   const toggleBreadState = () => {
     setBreadState(!BreadState);
   }
-
   // Cheese State
   const [CheeseState, setCheeseState] = useState(false);
   const toggleCheeseState = () => {
@@ -68,10 +74,18 @@ function SliderSection() {
             <div className="detail-text">
               다양한 메뉴 중 원하는 메뉴를 고르세요.<br></br>
               15cm, 30cm 중 선택이 가능합니다.<br></br>
-              자세한 메뉴 설명은 아래 버튼을 클릭하세요!<br></br>
+              자세한 메뉴는 아래 버튼을 눌러 참고하세요!<br></br>
             </div>
             <div className="modal-btnContainer">
-              <button className="modal-openBtn">메뉴 보기</button>
+              <button className="modal-openBtn" onClick={() => toggleMenuState()}>메뉴 보기</button>
+              <div className={`modal-dialog modalShowing-${MenuState}`} >
+                <div className="modal-body" >
+                  <div className="modal-closeBtnContainer">
+                    <button className="modal-closeBtn" onClick={() => toggleMenuState()}>닫기</button>
+                  </div>
+                  <MenuList />
+                </div>
+              </div>
             </div>
           </div>
         </div>

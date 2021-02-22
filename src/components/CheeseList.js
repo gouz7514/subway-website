@@ -1,5 +1,5 @@
 import React from 'react';
-import CheeseItems from './items/CheeseItems';
+import Items from './items/Items.js';
 import './Cards.css';
 import './IngredientList.css';
 
@@ -28,17 +28,17 @@ class CheeseList extends React.Component {
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            <CheeseItems
+            <Items
               src='https://ik.imagekit.io/fsio0iplxb8/subway-cheese/AmericanCheese_WzuI-V8DY.jpg'
               text='40kcal'
               label='아메리칸 치즈'
             />
-            <CheeseItems
+            <Items
               src='https://ik.imagekit.io/fsio0iplxb8/subway-cheese/ShreddedCheese_gpyXckKDDce.jpg'
               text='50kcal'
               label='슈레드 치즈'
             />
-            <CheeseItems
+            <Items
               src='https://ik.imagekit.io/fsio0iplxb8/subway-cheese/MozzarellaCheese_q16W_BvqIo3.jpg'
               text='44kcal'
               label='모차렐라 치즈'

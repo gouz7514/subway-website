@@ -1,14 +1,6 @@
 import React from 'react'
 
-const images = document.querySelectorAll("img");
-
-images.forEach((image) => {
-  image.addEventListener('click', () => {
-    console.log('image clicked');
-  })
-})
-
-function CheeseItems(props) {
+function Items(props) {
   return (
     <>
       <li className="ingredient__item">
@@ -17,9 +9,7 @@ function CheeseItems(props) {
             <img src={props.src+'?tr=w-400,h-300,bl-30,q-50'} alt={props.label+' 이미지'} className="cards__item__img" data-lazy={props.src}/>
           </figure>
           <div className="ingredient__item__info">
-            <div className="ingredient__item__text__wrapper">
-              <h5 className="ingredient__item__text bigger">{props.text}</h5>
-            </div>
+            <h5 className="ingredient__item__text">{props.text.replaceAll('<br>', '\n')}</h5>
           </div>
         </div>
       </li>
@@ -27,4 +17,4 @@ function CheeseItems(props) {
   )
 }
 
-export default CheeseItems;
+export default Items;
