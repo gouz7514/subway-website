@@ -46,6 +46,16 @@
   box-sizing: border-box;
 }
 
+.ingredient__item__label {
+  font-size: 18px;
+  color: #000;
+  background-color: #f8a5c2;
+  z-index: 5;
+  padding: 6px 8px;
+  max-width: calc((100%) - 60px);
+  margin-left: 250px;
+}
+
 .ingredient__item__img {
   position: absolute;
   top: 0;
@@ -98,5 +108,8 @@
   }
   .ingredient__item__link.large {
     width: 25rem;
+  }
+  .ingredient__item__label {
+    margin-left: 280px;
   }
 }
