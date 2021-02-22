@@ -12,6 +12,7 @@ import CheeseList from './CheeseList.js';
 import SauceList from './SauceList.js';
 import VegetableList from './VegetableList.js';
 import MenuList from './MenuList.js';
+import ToppingList from './ToppingList.js';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -27,6 +28,11 @@ function SliderSection() {
   const [BreadState, setBreadState] = useState(false);
   const toggleBreadState = () => {
     setBreadState(!BreadState);
+  }
+  // Topping State
+  const [ToppingState, setToppingState] = useState(false);
+  const toggleToppingState = () => {
+    setToppingState(!ToppingState);
   }
   // Cheese State
   const [CheeseState, setCheeseState] = useState(false);
@@ -127,7 +133,20 @@ function SliderSection() {
             <span className="detail-text">
               베이컨, 새우 등 다양한 토핑을 추가해<br></br>
               나만의 써브웨이를 즐기세요!<br></br>
+              <br></br>
+              <b>토핑은 추가비용이 발생합니다</b>
             </span>
+            <div className="modal-btnContainer">
+              <button className="modal-openBtn" onClick={() => toggleToppingState()}>토핑 보기</button>
+              <div className={`modal-dialog modalShowing-${ToppingState}`} >
+                <div className="modal-body" >
+                  <div className="modal-closeBtnContainer">
+                    <button className="modal-closeBtn" onClick={() => toggleToppingState()}>닫기</button>
+                  </div>
+                  <ToppingList />
+                </div>
+              </div>
+            </div>
           </div>
       </div>
       </SwiperSlide>

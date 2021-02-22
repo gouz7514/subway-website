@@ -40,8 +40,9 @@
   margin: 0 2rem;
 }
 .modal-openBtn, .modal-closeBtn {
-  border-radius: 4px;
-  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 18px 32px;
   font-weight: bold;
   background: #009223;
   border: 1px solid var(--primary);
