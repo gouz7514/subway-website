@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import '../App.css';
-import './IngredientList.css';
+import './css/IngredientList.css';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import './SliderSection.css';
-import './Modal.css';
+import './css/SliderSection.css';
+import './css/Modal.css';
 import BreadList from './BreadList.js';
 import CheeseList from './CheeseList.js';
 import SauceList from './SauceList.js';

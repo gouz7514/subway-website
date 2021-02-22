@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuItems from './items/MenuItems';
-import './Cards.css';
-import './IngredientList.css';
+import './css/Cards.css';
+import './css/IngredientList.css';
 
 class MenuList extends React.Component {
   componentDidMount() {

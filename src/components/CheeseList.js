@@ -1,7 +1,7 @@
 import React from 'react';
 import Items from './items/Items.js';
-import './Cards.css';
-import './IngredientList.css';
+import './css/Cards.css';
+import './css/IngredientList.css';
 
 class CheeseList extends React.Component {
   componentDidMount() {
