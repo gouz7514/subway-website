@@ -53,7 +53,7 @@
   z-index: 5;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
-  margin-left: 250px;
+  margin-left: 260px;
 }
 
 .ingredient__item__img {
@@ -106,10 +106,7 @@
   .ingredient__item__link {
     width: 20rem;
   }
-  .ingredient__item__link.large {
-    width: 25rem;
-  }
   .ingredient__item__label {
-    margin-left: 280px;
+    margin-left: 230px;
   }
 }
