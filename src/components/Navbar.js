@@ -1,32 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import { Button } from './Button';
+// import { Button } from './Button';
 import './css/Navbar.css';
 import Dropdown from './Dropdown';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-  // const [dropdown, setDropdown] = useState(false);
+  // const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  // const onMouseEnter = () => {
-  //   if (window.innerWidth <= 960) {
-  //     setDropdown(true);
-  //   } else {
-  //     setDropdown(true);
-  //   }
-  // };
-
-  // const onMouseLeave = () => {
-  //   if (window.innerWidth <= 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(false);
-  //   }
-  // };
 
   const handleDropClick = (e) => {
     if(!e.target.closest('.nav-dropdown')) {
@@ -35,22 +18,22 @@ function Navbar() {
     }
   };
 
-  const showButton = () => {
-    if(window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  }
+  // const showButton = () => {
+  //   if(window.innerWidth <= 960) {
+  //     setButton(false);
+  //   } else {
+  //     setButton(true);
+  //   }
+  // }
 
   const onDropClick = () => {
     const x = document.querySelector('.dropdown-menu');
     x.classList.toggle('active');
   }
   
-  useEffect(() => {
-    showButton()
-  }, []);
+  // useEffect(() => {
+  //   showButton()
+  // }, []);
 
   useEffect(() => {
     document.addEventListener('click', handleDropClick);
@@ -59,7 +42,7 @@ function Navbar() {
     };
   });
 
-  window.addEventListener('resize', showButton);
+  // window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -77,28 +60,19 @@ function Navbar() {
                 이용 방법
               </Link>
             </li>
-            {/* <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> */}
             <li className='nav-item' >
-              {/* <div className='nav-links nav-dropdown' onClick={() => setDropdown(dropdown => !dropdown)}> */}
               <div className='nav-links nav-dropdown' onClick={onDropClick}>
                 재료 소개 <i className='fas fa-caret-down' />
                 <Dropdown />
               </div>
-              {/* <Dropdown /> */}
-              {/* {dropdown && <Dropdown />} */}
             </li>
             <li className='nav-item'>
               <Link to='/subway-website/combinations' className='nav-links' onClick={closeMobileMenu}>
                 꿀 조합
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link to='/subway-website/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                Sign Up
-              </Link>
-            </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         </div>
       </nav>
     </>

@@ -1,6 +1,7 @@
 :root {
   --swiper-navigation-color: #ffce32;
   --swiper-theme-color: #ffce32;
+  --primary: #ffce32;
 }
 
 .swiper-container {
