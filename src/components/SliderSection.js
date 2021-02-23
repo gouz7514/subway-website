@@ -13,6 +13,7 @@ import SauceList from './SauceList.js';
 import VegetableList from './VegetableList.js';
 import MenuList from './MenuList.js';
 import ToppingList from './ToppingList.js';
+import SetList from './SetList.js';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -39,7 +40,6 @@ function SliderSection() {
   const toggleCheeseState = () => {
     setCheeseState(!CheeseState);
   }
-
   // Sauce State
   const [SauceState, setSauceState] = useState(false);
   const toggleSauceState = () => {
@@ -49,6 +49,11 @@ function SliderSection() {
   const [VegetableState, setVegetableState] = useState(false);
   const toggleVegetableState = () => {
     setVegetableState(!VegetableState);
+  }
+  // Set State
+  const [SetState, setSetState] = useState(false);
+  const toggleSetState = () => {
+    setSetState(!SetState);
   }
 
   return (
@@ -224,6 +229,17 @@ function SliderSection() {
               써브웨이의 별미!<br></br>
               쿠키, 칩과 함께 즐겨보세요!<br></br>
             </span>
+            <div className="modal-btnContainer">
+              <button className="modal-openBtn" onClick={() => toggleSetState()}>세트 보기</button>
+              <div className={`modal-dialog modalShowing-${SetState}`} >
+                <div className="modal-body" >
+                  <div className="modal-closeBtnContainer">
+                    <button className="modal-closeBtn" onClick={() => toggleSetState()}>닫기</button>
+                  </div>
+                  <SetList />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </SwiperSlide>
