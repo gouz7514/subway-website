@@ -55,7 +55,7 @@
 
 @media only screen and (max-width: 960px) {
   .swiper-container {
-    height: 600px;
+    height: 700px;
   }
   .detail-text, .swiper-slide-content-intro {
     font-size: 18px;

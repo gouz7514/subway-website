@@ -26,7 +26,7 @@ class MenuList extends React.Component {
     return (
       <div className='cards'>
         <div className="cards__container">
-          <div className="cards__wrapper">
+          <div className="cards__wrapper sortable">
             <ul className="cards__items">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/EggMayoBacon_xOsDP6VAl.png'

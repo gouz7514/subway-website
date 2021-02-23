@@ -94,6 +94,12 @@ function SliderSection() {
                   <div className="modal-closeBtnContainer">
                     <button className="modal-closeBtn" onClick={() => toggleMenuState()}>닫기</button>
                   </div>
+                  <div className="modal-sortable">
+                  {/* <select name="calorie" id="calorie">
+                    <option value="calorieUp">칼로리 높은 순</option>
+                    <option value="calorieDown">칼로리 낮은 순</option>
+                  </select> */}
+                  </div>
                   <MenuList />
                 </div>
               </div>
