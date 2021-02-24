@@ -2,7 +2,7 @@
 
 ## 프로젝트명
 #### 어케했Sub [링크](https://gouz7514.github.io/subway-website/)<br>
-![어케했Sub 동작 예시](https://ik.imagekit.io/fsio0iplxb8/___Sub_______j9EsVkpTD.gif)
+![어케했Sub 작동 모습](https://user-images.githubusercontent.com/41367134/108964451-d4252500-76be-11eb-80b2-00051a3f587c.gif)
 
 ## 프로젝트 설명
 React를 활용해 써브웨이의 사용법을 알려주는 **SPA 웹사이트의 구축**을 목표로 함<br>
