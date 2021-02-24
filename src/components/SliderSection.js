@@ -20,6 +20,11 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 function SliderSection() {
   let width = (window.innerWidth < 960);
 
+  // select
+  // let s = document.getElementById('calorie');
+  // let cal = s.options[s.selectedIndex].text;
+  // console.log(cal);
+
   // Menu State
   const [MenuState, setMenuState] = useState(false);
   const toggleMenuState = () => {
@@ -93,12 +98,6 @@ function SliderSection() {
                 <div className="modal-body" >
                   <div className="modal-closeBtnContainer">
                     <button className="modal-closeBtn" onClick={() => toggleMenuState()}>닫기</button>
-                  </div>
-                  <div className="modal-sortable">
-                  {/* <select name="calorie" id="calorie">
-                    <option value="calorieUp">칼로리 높은 순</option>
-                    <option value="calorieDown">칼로리 낮은 순</option>
-                  </select> */}
                   </div>
                   <MenuList />
                 </div>

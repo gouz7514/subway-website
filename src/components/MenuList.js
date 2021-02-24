@@ -3,8 +3,69 @@ import MenuItems from './items/MenuItems';
 import './css/Cards.css';
 import './css/IngredientList.css';
 
+// 이게 맞는지는 모르겠지만 어쨌든 됐네 ㅋㅋㅋ
+function changeSelect() {
+  // 메뉴 ul 포함하고 있는 div 선택자
+  let menu = document.querySelector('.cards__wrapper.sortable');
+  // 이 아래에 있는 li들 선택자
+  let li = menu.querySelectorAll('li');
+  // object to array
+  let liArr = Array.prototype.slice.call(li, 0);
+
+  let cal = document.getElementById('calorie');
+  let sortBy = cal.options[cal.selectedIndex].value;
+
+  // 칼로리 부분만 따로 선택
+  let menuCal = document.querySelectorAll('.cards__wrapper.sortable .ingredient__item__label');
+  let menuCalArr = [];
+  menuCal.forEach(menu => {
+    menuCalArr.push(menu.innerHTML.slice(0,3));
+  });
+
+  switch(sortBy) {
+    case 'calorieUp':
+      liArr.sort(function(a,b) {
+        let aCal = a.innerText.slice(0,3);
+        let bCal = b.innerText.slice(0,3);
+        if (aCal > bCal) return -1;
+        if (aCal < bCal) return 1;
+        return 0;
+      })
+
+      for(let i = 0; i < li.length; i++) {
+        let ci = document.querySelector(`.cards__${parseInt(i/3) + 1}`);
+        ci.appendChild(liArr[i]);
+      }
+      break;
+
+    case 'calorieDown':
+      liArr.sort(function(a,b) {
+        let aCal = a.innerText.slice(0,3);
+        let bCal = b.innerText.slice(0,3);
+        if (aCal > bCal) return 1;
+        if (aCal < bCal) return -1;
+        return 0;
+      })
+
+      for(let i = 0; i < li.length; i++) {
+        let ci = document.querySelector(`.cards__${parseInt(i/3) + 1}`);
+        ci.appendChild(liArr[i]);
+      }
+      break;
+    
+    default:
+      break;
+  }
+
+}
+
 class MenuList extends React.Component {
+  state = {
+    sortCalorie: {order: "asc"},
+  };
+
   componentDidMount() {
+
     const images = document.querySelectorAll("img");
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -24,10 +85,18 @@ class MenuList extends React.Component {
 
   render() {
     return (
+      <>
+      <div className="select-boxContainer">
+        <select className="select-box" name="calorie" id="calorie" onChange={changeSelect}>
+          <option value="">기준을 선택하세요</option>
+          <option value="calorieUp">칼로리 높은 순</option>
+          <option value="calorieDown">칼로리 낮은 순</option>
+        </select>
+      </div>
       <div className='cards'>
         <div className="cards__container">
           <div className="cards__wrapper sortable">
-            <ul className="cards__items">
+            <ul className="cards__items cards__1">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/EggMayoBacon_xOsDP6VAl.png'
                 text='에그마요와 바삭 베이컨이 만나면?<br>실패 확률 0% 써브웨이 공식 꿀조합'
@@ -47,7 +116,7 @@ class MenuList extends React.Component {
                 calorie='480kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__2">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/K-BBQ_yaVJQeSx0.jpg'
                 text='써브웨이 최초의 코리안 스타일 샌드위치!<br>
@@ -70,7 +139,7 @@ class MenuList extends React.Component {
                 calorie='350kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__3">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/PulledPork_iJQFZmcUy.jpg'
                 text='7시간 저온 훈연한 미국 정통 스타일의 <br>리얼 바비큐 풀드포크'
@@ -91,7 +160,7 @@ class MenuList extends React.Component {
                 calorie='380kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__4">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/Meatball_xG5Qqboht.jpg'
                 text='이탈리안 스타일 비프 미트볼에<br>써브웨이만의 풍부한 토마토 향이<br>
@@ -112,7 +181,7 @@ class MenuList extends React.Component {
                 calorie='480kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__5">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/RoastedChicken_gX-AOSZjUES.jpg'
                 text='오븐에 구워 담백한<br>저칼로리 닭가슴살의 건강한 풍미'
@@ -132,7 +201,7 @@ class MenuList extends React.Component {
                 calorie='280kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__6">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/Veggie_Z5ixXjgJQ.jpg'
                 text='갓 구운 빵과 신선한 7가지 야채로<br>즐기는 깔끔한 한끼'
@@ -152,7 +221,7 @@ class MenuList extends React.Component {
                 calorie='420kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__7">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/SubwayMelt_sAEsp-uuu.jpg'
                 text='자신있게 추천하는 터키, 햄, 베이컨의<br>완벽한 맛의 밸런스'
@@ -173,7 +242,7 @@ class MenuList extends React.Component {
                 calorie='370kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__8">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/HamEggCheese_re5ZHzOCe.jpg'
                 text='푹신한 오믈렛과 햄의 가장 클래식한 조화<br>
@@ -196,7 +265,7 @@ class MenuList extends React.Component {
                 calorie='450kcal'
               />
             </ul>
-            <ul className="cards__items">
+            <ul className="cards__items cards__9">
               <MenuItems
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-menu/SteakEggCheese_GQlCxlLzg.jpg'
                 text='육즙 가득 비프 스테이크로 든든한 아침 식사<br>
@@ -208,6 +277,7 @@ class MenuList extends React.Component {
           </div>
         </div>
       </div>
+      </>
     )
   }
 }
