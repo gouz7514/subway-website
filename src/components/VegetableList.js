@@ -41,7 +41,7 @@ class VegetableList extends React.Component {
                 src='https://ik.imagekit.io/fsio0iplxb8/subway-vegetable/cucumber_HkESQErEUVh.jpg'
                 text='5kcal'
                 label='오이'
-              />           
+              />         
             </ul>
             <ul className="cards__items">
               <Items

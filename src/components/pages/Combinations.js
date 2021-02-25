@@ -1,11 +1,12 @@
 import React from 'react';
 import '../../App.css';
 import Footer from '../Footer';
+import CombList from '../CombList';
 
 export default function Combinations() {
   return (
     <>
-      <h1 className="combinations">꿀 조합</h1>
+      <CombList />
       <Footer />
     </>
   )
